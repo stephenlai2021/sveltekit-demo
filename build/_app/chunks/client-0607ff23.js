@@ -1,0 +1,1 @@
+import{Z as e,_ as p,$ as t,a0 as o}from"./vendor-f0c1caf4.js";let a;a={apiKey:"AIzaSyDQcbr4SLpZj5bP7zn84_vK1fzbkuxjG_k",authDomain:"chat-app-9ff7a.firebaseapp.com",projectId:"chat-app-9ff7a",storageBucket:"chat-app-9ff7a.appspot.com",messagingSenderId:"870524125509",appId:"1:870524125509:web:8d3cfb6c72a3f3aadb7e2c"};e(a);const s=p(),f=new t,r=o();export{s as a,r as d,f as p};
