@@ -63,7 +63,7 @@
 	.layout {
 		display: flex;
 		justify-content: center;
-		border: 1px solid;
+		/* border: 1px solid; */
 	}
 	a {
 		color: black;

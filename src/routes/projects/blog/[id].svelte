@@ -35,7 +35,7 @@
 
 		return {
 			status: res.status,
-      error: new Error(`Could not fetch post id: ${params.id}`)
+			error: new Error(`Could not fetch post id: ${params.id}`)
 			// redirect: '/projects/blog'
 		};
 	};
@@ -46,15 +46,20 @@
 	console.log('post: ', post);
 </script>
 
-<h2>{post.title}</h2>
 <div class="post">
+	<h2>{post.title}</h2>
 	<p>{post.body}</p>
 </div>
 
 <style>
+	h2 {
+		margin-bottom: 20px;
+	}
 	.post {
-		display: flex;
-		justify-content: center;
+		max-width: 800px;
+		margin: auto;
+		/* display: flex;
+		justify-content: center; */
 	}
 	h2 {
 		text-align: center;
