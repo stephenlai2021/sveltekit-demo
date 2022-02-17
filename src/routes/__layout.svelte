@@ -1,13 +1,4 @@
 <script context="module">
-	// import { page } from '$app/stores'
-
-	export const load = ({ url }) => {
-		return {
-			props: {
-				url: url.pathname
-			}
-		};
-	};
 </script>
 
 <script>
