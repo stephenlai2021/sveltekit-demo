@@ -216,7 +216,8 @@
 		top: 60px;
 		width: 100%;
 		height: calc(100vh - 60px);
-		padding: 20px 20px 80px 20px;
+		padding: 20px;
+		padding-bottom: 60px;
 		overflow-y: auto;
 	}
 

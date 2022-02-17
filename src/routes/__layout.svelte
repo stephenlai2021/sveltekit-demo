@@ -24,6 +24,10 @@
 </div>
 
 <style>
+	.layout {
+		overflow-x: hidden;
+	}
+
 	.content {
 		margin-left: 20%;
 		height: 100%;
