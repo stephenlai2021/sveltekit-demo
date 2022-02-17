@@ -43,11 +43,6 @@
 		width: 70%;
 	}
 
-	.content h1 {
-		text-align: center;
-		padding: 10px 0;
-	}
-
 	.layout {
 		position: fixed;
 	}
