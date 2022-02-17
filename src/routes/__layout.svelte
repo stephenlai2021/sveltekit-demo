@@ -26,13 +26,8 @@
 <style>
 	.content {
 		margin-left: 20%;
-		min-height: 100vh;
-		padding-bottom: 50px;
+		height: 100%;
 		width: 70%;
-	}
-
-	.layout {
-		position: fixed;
 	}
 
 	.page {
@@ -40,6 +35,6 @@
 		border: 1px solid rgba(255, 255, 255, 0.06);
 		display: flex;
 		overflow-y: auto;
-		height: 100vh;
+		height: 90vh;
 	}
 </style>
