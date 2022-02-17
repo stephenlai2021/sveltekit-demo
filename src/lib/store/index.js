@@ -11,8 +11,8 @@ export const activeItem = writable(null)
 export const idToken = writable(browser && localStorage.getItem("id token"))
 idToken.subscribe((val) => browser && localStorage.setItem("id token", val))
 
-export const pageDetails = writable(browser && localStorage.getItem("page details"))
-pageDetails.subscribe((val) => browser && localStorage.setItem("page details", val))
+export const pageDetails = writable(browser && JSON.parse(localStorage.getItem("page details")))
+pageDetails.subscribe((val) => browser && localStorage.setItem("page details", JSON.stringify(val)))
 
 export const searchedMovie = writable(browser && localStorage.getItem("searched movie"))
 searchedMovie.subscribe((val) => browser && localStorage.setItem("searched movie", val))
