@@ -45,8 +45,10 @@
 		</div>
 
 		<div class="right">
-			{#if user && JSON.parse($pageDetails).title === 'Book List'}
-				<a class="menu-link" href="/projects/booklist/createbook">Add new book</a>
+			{#if user}
+				{#if JSON.parse($pageDetails).title === 'Book List'}
+					<a class="menu-link" href="/projects/booklist/createbook">Add new book</a>
+				{/if}
 			{/if}
 			<div class="profile">
 				<div class="config">
