@@ -76,7 +76,7 @@
 	});
 </script>
 
-<!-- <div class="layout">
+<div class="layout">
 	<div class="header">
 		<h1>Sveltekit + Firebase tutorials</h1>
 		<div class="search">
@@ -95,19 +95,19 @@
 			{/each}
 		</ol>
 	</div>
-</div> -->
-
-<div class="layout">
-	<h1>Welcome to my site 😀</h1>
 </div>
 
+<!-- <div class="layout">
+	<h1>Welcome to my site 😀</h1>
+</div> -->
+
 <style>
-	.layout {
+	/* .layout {
 		height: calc(100vh - 77px);
 		width: 100%;
 		display: grid;
 		place-items: center;
-	}
+	} */
 
 	:global(.dark) a {
 		color: var(--dark-mode-text);
