@@ -1,5 +1,5 @@
 <script>
-	import { fly } from 'svelte/transition'
+	import { fly } from 'svelte/transition';
 
 	let keyword = '';
 
@@ -68,7 +68,7 @@
 		{
 			title: 'Ninja Gaming',
 			path: '/projects/ninja-gaming'
-		},
+		}
 	];
 
 	$: searchedKeywords = menuItems.filter((item) => {
@@ -76,34 +76,39 @@
 	});
 </script>
 
-<div class="">
-	<div class="layout">
-		<div class="header">
-			<h1>Sveltekit + Firebase tutorials</h1>
-			<div class="search">
-				<form>
-					<label for="search_article">Search Article</label>
-					<input 
-						type="text" 
-						name="search_article"
-						bind:value={keyword}
-					/>
-				</form>
-			</div>
-		</div>
-		<div class="list-container">
-			<ol>
-				{#each searchedKeywords as item}
-					<li>
-						<a sveltekit:prefetch href={item.path}>{item.title}</a>
-					</li>
-				{/each}
-			</ol>
+<!-- <div class="layout">
+	<div class="header">
+		<h1>Sveltekit + Firebase tutorials</h1>
+		<div class="search">
+			<form>
+				<label for="search_article">Search Article</label>
+				<input type="text" name="search_article" bind:value={keyword} />
+			</form>
 		</div>
 	</div>
+	<div class="list-container">
+		<ol>
+			{#each searchedKeywords as item}
+				<li>
+					<a sveltekit:prefetch href={item.path}>{item.title}</a>
+				</li>
+			{/each}
+		</ol>
+	</div>
+</div> -->
+
+<div class="layout">
+	<h1>Welcome to my site 😀</h1>
 </div>
 
 <style>
+	.layout {
+		height: calc(100vh - 77px);
+		width: 100%;
+		display: grid;
+		place-items: center;
+	}
+
 	:global(.dark) a {
 		color: var(--dark-mode-text);
 	}
