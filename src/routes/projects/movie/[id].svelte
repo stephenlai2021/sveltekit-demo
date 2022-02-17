@@ -58,6 +58,10 @@
 </div>
 
 <style>
+	.page {
+		padding-top: 20px;
+	}
+
 	h1 {
 		padding: 1rem 0;
 	}
@@ -66,13 +70,13 @@
 	}
 	.img-container {
 		width: 100%;
+		/* border: 1px solid; */
 	}
 	img {
-		width: 100%;
+		min-width: 100%;
 		border-radius: 1rem;
-	}
-	.movie-details {
-		margin: 2rem 20%;
+		object-fit: cover;
+		/* border: 1px solid; */
 	}
 	span {
 		font-weight: bold;

@@ -1,5 +1,11 @@
-<!-- <div class="page"> -->
-	<h1>About Us</h1>
+<script>
+	import Title from '$lib/components/ninja-gaming/Title.svelte';
+	import { fly } from 'svelte/transition';
+</script>
+
+<!-- <div class="about" in:fly={{ y: 50, duration: 300, delay: 300 }} out:fly={{ duration: 300 }}> -->
+<div class="about">
+	<h2>About Us</h2>
 	<p>
 		Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus esse eligendi eum velit
 		assumenda! Ratione nulla ut tempora consequuntur esse ea excepturi quisquam amet natus
@@ -11,6 +17,13 @@
 		necessitatibus deserunt nisi fugiat voluptatem optio. Similique temporibus nobis dolores. Eum, a
 		assumenda.
 	</p>
-<!-- </div> -->
+</div>
 
-
+<style>
+	h2 {
+		text-align: center;
+	}
+	.about {
+		margin: 20px auto;
+	}
+</style>

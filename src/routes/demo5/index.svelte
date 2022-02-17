@@ -1,11 +1,12 @@
 <script>
 	import { db, auth } from '$lib/firebase/client';
 	import { onAuthStateChanged } from 'firebase/auth';
-	import { doc, collection, onSnapshot } from 'firebase/firestore';
+	import { doc, collection, onSnapshot, updateDoc } from 'firebase/firestore';
 	import { getAllDocs } from '$lib/functions/firebase/getDocs';
 
 	let inputValue = '';
-	let users;
+	let user = null
+	let users = null;
 	let err = null;
 	let loading = false;
 	let avatar;
@@ -19,25 +20,28 @@
 	let usersRef = collection(db, 'whatzapp_users');
 
 	// let user = auth.currentUser
-	onAuthStateChanged(auth, (user) => console.log('loggedin-user:', user));
-	// console.log('loggedinUser:', loggedinUser)
-
-	// let docRef = doc('whatzapp_users', )
+	onAuthStateChanged(auth, (_user) => { 
+		// console.log('loggedin-user:', user)
+		if (_user) user = _user
+		else console.log('no user founed')
+	});
 
 	const handleSearch = async () => {
-		loading = true;
-
 		const { docs, error } = await getAllDocs('whatzapp_users', ['name', '==', inputValue]);
 		console.log('user | demo5: docs ', docs);
+		
+		loading = true;
 		users = docs;
-		console.log('user | demo5: user ', users);
 		loading = false;
 		err = error;
 	};
 
-	const addFriend = async () => {};
-
-	const getUserContactList = () => {};
+	const addFriend = async () => {
+		let userDoc = doc(db, 'whatzapp_users', users[0].uid)
+		await updateDoc(userDoc, {
+			contactList: [...users[0].contactList, user.uid]
+		})
+	};
 
 	const handleLoadImg = () => {
 		let img = new Image();

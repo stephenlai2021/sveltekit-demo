@@ -1,5 +1,5 @@
 <script>
-  import MovieCard from '$lib/components/movie database/MovieCard.svelte'
+  import MovieCard from '$lib/components/movie/MovieCard.svelte'
 
 	export let popular;
 </script>
@@ -17,6 +17,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     grid-column-gap: 1rem;
+    /* grid-row-gap: 1rem; */
   }
   h3 {
     padding: 0 1rem;

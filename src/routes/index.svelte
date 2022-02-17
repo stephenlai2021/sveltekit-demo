@@ -1,4 +1,6 @@
 <script>
+	import { fly } from 'svelte/transition'
+
 	let keyword = '';
 
 	const menuItems = [
@@ -74,11 +76,20 @@
 	});
 </script>
 
-<div class="page">
+<div class="">
 	<div class="layout">
 		<div class="header">
 			<h1>Sveltekit + Firebase tutorials</h1>
-			<input type="text" bind:value={keyword} />
+			<div class="search">
+				<form>
+					<label for="search_article">Search Article</label>
+					<input 
+						type="text" 
+						name="search_article"
+						bind:value={keyword}
+					/>
+				</form>
+			</div>
 		</div>
 		<div class="list-container">
 			<ol>
@@ -96,16 +107,21 @@
 	:global(.dark) a {
 		color: var(--dark-mode-text);
 	}
+
 	.list-container {
 		display: flex;
-		justify-content: center;
 	}
-	.header {
-		text-align: center;
+
+	.layout .header {
+		display: block;
+		padding: 0;
+		background: inherit;
 	}
+
 	a {
 		text-decoration: none;
 	}
+
 	li {
 		margin: 5px;
 	}

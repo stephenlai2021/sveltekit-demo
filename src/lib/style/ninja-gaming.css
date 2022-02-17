@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+  --gaming-color: #decff1;
+}
+
+body {
+  /* background: #422d5d; */
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+/* h1, h2, h3, h4, a, p, li {
+  color: var(--gaming-color);
+  font-family: 'vT323', monospace;
+  font-weight: normal;
+} */

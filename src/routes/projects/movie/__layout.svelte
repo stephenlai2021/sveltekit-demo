@@ -1,11 +1,18 @@
 <script>
-  // import Navbar from '$lib/components/movie/Navbar.svelte'
-  import Title from '$lib/components/Title.svelte'
+  import Title from '$lib/components/booklist/Title.svelte'
 </script>
 
 <svelte:head>
-  <title>Movie database</title>
+  <title>Movie Gallery</title>
 </svelte:head>
 
-<Title title="Movie Database" />
-<slot />
+<div class="page">
+  <slot />
+</div>
+
+<style>
+  .page {
+    /* border: 1px solid; */
+    margin-bottom: 20px;
+  }
+</style>

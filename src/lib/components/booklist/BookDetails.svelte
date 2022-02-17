@@ -22,7 +22,6 @@
 
 <li>
   <div class="details">
-    <!-- <h3 on:click={() => handleDelete(book)}>{book.title}</h3> -->
     <h3 class:picked={toggle} on:click={() => toggle = !toggle}>{book.title}</h3>
     <p>By {book.author}</p>
   </div>
@@ -40,27 +39,41 @@
   .icons {
     display: flex;
   }
+
   .picked {
     text-decoration: line-through;
+    color: gray;
   }
+
   .selected {
     color: red;
   }
+
+  /* .material-icons {
+    border: 1px solid;
+  } */
+
+  /* .icons {
+    border: 1px solid;
+    height: 32px;
+  } */
+
   .icon {
     cursor: pointer;
-    /* border: 1px solid; */
     display: flex;
-    /* align-items: flex-start; */
     padding-top: 5px;
     margin-left: 10px;
   }
-  h3 {
+
+  .details h3 {
     cursor: pointer;
-    /* border: 1px solid; */
+
+    white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+    max-width: 400px;
   }
-  h3:hover {
-    text-decoration: line-through;
-  }
+  
   li {
     list-style: none;
     border: 1px solid white;
@@ -69,8 +82,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-  }
-  .details {
-    /* display: flex; */
+    width: 500px;
+
   }
 </style>

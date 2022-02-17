@@ -1,14 +1,15 @@
 <script>
-	export let title;
+	export let title = 'App title';
 </script>
 
 <nav>
-	{#if title === 'Movie Database'}
+	<!-- {#if title === 'Movie Database'}
 		<a href="/projects/movie">{title}</a>
 	{:else if title === 'Messenger'}
-		<a href="/projects/chat">{title}</a>
-		<!-- {:else} -->
-	{/if}
+	<a href="/projects/chat">{title}</a>
+	{/if} -->
+	
+	<a href="/projects/chat">{title}</a>
 </nav>
 
 <style>

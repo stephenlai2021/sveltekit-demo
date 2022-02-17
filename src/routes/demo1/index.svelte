@@ -12,7 +12,7 @@
 	});
 </script>
 
-<div class="wrapper">
+<div class="layout">
 	<header>
 		<img class="background" src="/city.jpg" alt="city pic" />
 		<img class="foreground" src="/spiderman2.png" alt="spiderman pic" />
@@ -49,8 +49,7 @@
 </div>
 
 <style>
-	/* parallax effect */
-	.wrapper {
+	.layout {
 		height: 100vh;
 		overflow-y: auto;
 		overflow-x: hidden;

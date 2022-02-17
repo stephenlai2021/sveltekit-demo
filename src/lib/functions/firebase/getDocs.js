@@ -2,7 +2,7 @@ import { db } from '$lib/firebase/client'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 
 export const getAllDocs = async (c, q) => {
-  let docs = null
+  let docs = []
   let error = null
   let tempDocs = []
   
@@ -18,7 +18,7 @@ export const getAllDocs = async (c, q) => {
       tempDocs.push(doc.data());
     });
     docs = tempDocs;
-    console.log('docs | functions ', docs)
+    // console.log('docs | functions ', docs)
   } catch (err) {
     error = err.message
   }

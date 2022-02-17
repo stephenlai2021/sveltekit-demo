@@ -1,7 +1,9 @@
 <script>
-
+	import { fly } from 'svelte/transition'
 </script>
 
+<!-- <div class="home" in:fly={{ y: 50, duration: 300, delay: 300 }} out:fly={{ duration: 300 }}> -->
+<div class="home">
 	<h2>Welcome</h2>
 	<p>
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate deleniti sunt explicabo
@@ -13,4 +15,15 @@
 		corrupti. Itaque, sapiente ea dolorem porro repellendus culpa, commodi atque delectus
 		reprehenderit nam autem magni quo incidunt reiciendis quaerat natus deleniti. Eum omnis rerum
 		aliquid?
-	</p>
+	</p>	
+</div>
+
+<style>
+	h2 {
+		text-align: center;
+	}
+
+	.home {
+		margin: 20px auto;
+	}
+</style>

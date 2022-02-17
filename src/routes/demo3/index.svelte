@@ -4,7 +4,7 @@
 	
 	export const load = async ({ fetch }) => {
 		const res = await fetch(
-			`https://firestore.googleapis.com/v1/projects/${VITE_PROJECT_ID}/databases/(default)/documents/${COLLECTION}`
+			`https://firestore.googleapis.com/v1/projects/${PROJECT_ID}/databases/(default)/documents/${COLLECTION}`
 		);
 
 		if (res.ok) {

@@ -10,7 +10,8 @@
 			const data = await res.json();
 			return {
 				props: { 
-					searchedMovies: data.results
+					searchedMovies: data.results,
+					movieTitle: params.id
 					// searchedMovies: data
 				}
 			};
@@ -19,15 +20,14 @@
 </script>
 
 <script>
-	import MovieCard from '$lib/components/movie database/MovieCard.svelte';
+	import MovieCard from '$lib/components/movie/MovieCard.svelte';
+	import { searchedMovie } from '$lib/store'
 
-	export let searchedMovies;
+	export let searchedMovies, movieTitle
 </script>
 
-<!-- <pre>
-  {JSON.stringify(searchedMovies, null, 2)}
-</pre> -->
-
+<!-- <h3>Search results: {$searchedMovie}</h3> -->
+<h3>Search results: {movieTitle}</h3>
 <div class="searched-movies">
 	{#each searchedMovies as movie}
 		<MovieCard {movie} />
@@ -35,6 +35,10 @@
 </div>
 
 <style>
+	h3 {
+		text-align: center;
+		margin: 20px;
+	}
 	.searched-movies {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));

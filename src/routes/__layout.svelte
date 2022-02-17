@@ -1,21 +1,62 @@
+<script context="module">
+	// import { page } from '$app/stores'
+
+	export const load = ({ url }) => {
+		return {
+			props: {
+				url: url.pathname
+			}
+		};
+	};
+</script>
+
 <script>
 	import '$lib/style/global.css';
 	import Navbar from '$lib/components/Navbar.svelte';
+	import Auth from '$lib/components/AuthMenu.svelte';
+	import SvelteTheme from 'svelte-themes/SvelteTheme.svelte';
 </script>
 
 <svelte:head>
 	<title>Sveltekit Demo</title>
 </svelte:head>
 
-<Navbar />
-<slot />
+<SvelteTheme />
+<div class="layout">
+	<Auth />
+	<div class="page">
+		<Navbar />
+		<div class="content">
+			<slot />
+		</div>
+	</div>
+</div>
 
 <style>
-	:global(body) {
-		transition: background-color 0.3s;
+	.content {
+		position: relative;
+		margin: auto;
+		min-height: 100vh;
+		padding-bottom: 50px;
+
+		/* we have to assign a width or browser initailize from 0, this brings bad ux !!! */
+		width: 70%;
 	}
-	:global(.dark) {
-		background-color: #1d3040;
-		color: #bfc2c7;
+
+	.content h1 {
+		text-align: center;
+		padding: 10px 0;
+	}
+
+	.layout {
+		position: fixed;
+	}
+
+	.page {
+		width: 100vw;
+		border: 1px solid rgba(255, 255, 255, 0.06);
+		display: flex;
+		overflow-y: auto;
+		height: 100vh;
 	}
 </style>

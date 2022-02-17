@@ -15,11 +15,14 @@
 </script>
 
 <script>
-	import PopularMovies from '$lib/components/movie database/PopularMovies.svelte';
-	import SearchMovies from '$lib/components/movie database/SearchMovies.svelte';
+	import PopularMovies from '$lib/components/movie/PopularMovies.svelte';
+	import SearchMovies from '$lib/components/movie/SearchMovies.svelte';
 	import { fly } from 'svelte/transition'
+	import { searchedMovie } from '$lib/store'
 
 	export let popular;
+
+	searchedMovie.set(null)
 </script>
 
 <div in:fly={{ y: 50, duration: 500, delay: 500 }} out:fly={{ duration: 500 }}>
