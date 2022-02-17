@@ -30,7 +30,7 @@
 
 <div class="layout">
 	<nav>
-		<h1>Hi, there ! 😀</h1>
+		<h1 class="logo">Hi 😀</h1>
 
 		{#if $pageDetails}
 			<div class="title">
@@ -93,6 +93,10 @@
 </div>
 
 <style>
+	.logo { 
+		width: 161px;
+	}
+
 	.right {
 		display: flex;
 		align-items: center;
@@ -101,8 +105,8 @@
 	
 	.title {
 		display: flex;
+		justify-content: center;
 		margin-left: 142px;
-		text-align: center;
 		width: 70%;
 	}
 

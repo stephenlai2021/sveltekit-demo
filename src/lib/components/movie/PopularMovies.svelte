@@ -10,16 +10,14 @@
     <MovieCard {movie} />
 	{/each}
 </div>
-<!-- <br> -->
 
 <style>
   .popular-movies {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     grid-column-gap: 1rem;
-    /* grid-row-gap: 1rem; */
   }
   h3 {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 </style>

@@ -35,7 +35,3 @@
 	  <button out:fly={{ x: 0, duration: 500 }} in:fly={{ x: 20, duration: 500 }} type="submit">Search</button>
   {/if}
 </form>
-
-<style>
-	
-</style>

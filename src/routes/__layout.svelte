@@ -25,12 +25,9 @@
 
 <style>
 	.content {
-		position: relative;
-		margin: auto;
+		margin-left: 20%;
 		min-height: 100vh;
 		padding-bottom: 50px;
-
-		/* we have to assign a width or browser initailize from 0, this brings bad ux !!! */
 		width: 70%;
 	}
 

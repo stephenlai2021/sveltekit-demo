@@ -45,6 +45,8 @@
 		padding-top: 10px;
 		overflow-y: auto;
 		min-height: calc(100vh - 80px);
+		position: fixed;
+		/* border: 1px solid; */
 	}
 
 	ul {

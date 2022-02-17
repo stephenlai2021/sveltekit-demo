@@ -34,7 +34,6 @@
   .movie-card {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
     padding: 0.5rem;
   }
 </style>
