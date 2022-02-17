@@ -35,21 +35,21 @@
 		</div>
 
 		<div class="middle">
-			{#if $pageDetails}
+			<!-- {#if $pageDetails}
 				<div class="title">
 					<h1>
 						<a href={JSON.parse($pageDetails).path}>{JSON.parse($pageDetails).title}</a>
 					</h1>
 				</div>
-			{/if}
+			{/if} -->
 		</div>
 
 		<div class="right">
-			{#if user}
+			<!-- {#if user}
 				{#if JSON.parse($pageDetails).title === 'Book List'}
 					<a class="menu-link" href="/projects/booklist/createbook">Add new book</a>
 				{/if}
-			{/if}
+			{/if} -->
 			<div class="profile">
 				<div class="config">
 					<div class="theme" on:click={toggleTheme}>
