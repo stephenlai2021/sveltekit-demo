@@ -1,1 +1,0 @@
-import{C as o}from"./vendor-f0c1caf4.js";const t=o(localStorage.getItem("loggedin-user"));t.subscribe(e=>localStorage.setItem("loggedin-user",e));const l=o(window.localStorage.getItem("lang"));l.subscribe(e=>{window.localStorage.setItem("lang",e)});export{t as l};

@@ -1,1 +1,0 @@
-import{d as l}from"./client-0607ff23.js";import{a5 as n,aj as f,ak as u,al as p}from"./vendor-f0c1caf4.js";const m=async(c,o)=>{let a=null,t=null,e=[];try{let s=n(l,c);o&&(s=f(s,u(...o))),(await p(s)).forEach(r=>{e.push(r.data())}),a=e,console.log("docs | functions ",a)}catch(s){t=s.message}return{docs:a,error:t}};export{m as g};
