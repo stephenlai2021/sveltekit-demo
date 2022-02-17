@@ -1,9 +1,9 @@
-import vercel from '@sveltejs/adapter-vercel';
+import adapter from '@sveltejs/adapter-auto';
 
 const config = {
 	kit: {
-		target: '#svelte',
-		adapter: vercel()
+		adapter: adapter(),
+		target: '#svelte'
 	}
 };
 
