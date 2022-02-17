@@ -38,14 +38,14 @@
 			{#if $pageDetails}
 				<div class="title">
 					<h1>
-						<a href={$pageDetails.path}>{$pageDetails.title}</a>
+						<a href={JSON.parse($pageDetails).path}>{JSON.parse($pageDetails).title}</a>
 					</h1>
 				</div>
 			{/if}
 		</div>
 
 		<div class="right">
-			{#if user && $pageDetails.title === 'Book List'}
+			{#if user && JSON.parse($pageDetails).title === 'Book List'}
 				<a class="menu-link" href="/projects/booklist/createbook">Add new book</a>
 			{/if}
 			<div class="profile">
