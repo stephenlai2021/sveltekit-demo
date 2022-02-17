@@ -4,7 +4,7 @@
 	import { pageDetails } from '$lib/store';
 	import Profile from '$lib/components/Profile.svelte';
 	import { showProfile } from '$lib/store';
-	import themeStore, { setTheme } from 'svelte-themes'
+	import themeStore, { setTheme } from 'svelte-themes';
 	import { onMount } from 'svelte';
 
 	let user = auth.currentUser;
@@ -13,19 +13,19 @@
 		user = _user;
 	});
 
-	let theme = true
+	let theme = true;
 	const toggleTheme = () => {
-		theme = !theme
-		if (theme) setTheme('dark')
-		if (!theme) setTheme('light')
-	}
+		theme = !theme;
+		if (theme) setTheme('dark');
+		if (!theme) setTheme('light');
+	};
 
 	onMount(() => {
-		if ($themeStore.theme === 'light') theme = false
-		if ($themeStore.theme === 'dark') theme = true
-	})
+		if ($themeStore.theme === 'light') theme = false;
+		if ($themeStore.theme === 'dark') theme = true;
+	});
 
-	$: console.log('theme mode: ', $themeStore.theme)
+	$: console.log('theme mode: ', $themeStore.theme);
 </script>
 
 <div class="layout">
@@ -45,40 +45,37 @@
 		</div>
 
 		<div class="right">
-			<!-- {#if user} -->
 			{#if user && JSON.parse($pageDetails).title === 'Book List'}
 				<a class="menu-link" href="/projects/booklist/createbook">Add new book</a>
 			{/if}
-			{#if user}
-				<div class="profile">
-					<div class="config">
-						<div class="theme" on:click={toggleTheme}>
-							{#if $themeStore.theme === 'light'}
-								<svg
-									class="icon-moon"
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 20 20"
-									fill="currentColor"
-									><path
-										d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-									/></svg
-								>
-							{:else}
-								<svg
-									class="icon-sun"
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 20 20"
-									fill="currentColor"
-									><path
-										fill-rule="evenodd"
-										d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-										clip-rule="evenodd"
-									/></svg
-								>
-							{/if}
-						</div>
+			<div class="profile">
+				<div class="config">
+					<div class="theme" on:click={toggleTheme}>
+						{#if $themeStore.theme === 'light'}
+							<svg
+								class="icon-moon"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" /></svg
+							>
+						{:else}
+							<svg
+								class="icon-sun"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								><path
+									fill-rule="evenodd"
+									d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+									clip-rule="evenodd"
+								/></svg
+							>
+						{/if}
 					</div>
+				</div>
 
+				{#if user}
 					<div class="img-container" on:click={() => ($showProfile = !$showProfile)}>
 						{#if user.photoURL}
 							<img src={user.photoURL} alt="" />
@@ -89,11 +86,12 @@
 							/>
 						{/if}
 					</div>
-					{#if $showProfile}
-						<Profile {user} />
-					{/if}
-				</div>
-			{/if}
+				{/if}
+
+				{#if $showProfile}
+					<Profile {user} />
+				{/if}
+			</div>
 		</div>
 	</nav>
 </div>
@@ -103,7 +101,7 @@
 		display: flex;
 		align-items: center;
 	}
-	
+
 	.left {
 		display: flex;
 	}

@@ -24,8 +24,8 @@
 		if ($page.url.fullpath === '/projects/todo') {
 			goto('/projects/todo/login');
 		}
-		// if ($page.url.fullpath === '/projects/private-chat') {
-		// 	goto('/projects/private-chat/login');
+		// if ($page.url.fullpath === '/projects/') {
+		// 	goto('/projects/login');
 		// }
 	}
 </script>

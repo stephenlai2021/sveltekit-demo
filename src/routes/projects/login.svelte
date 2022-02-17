@@ -10,7 +10,7 @@
 	onMount(() => {
 		const unsub = onAuthStateChanged(auth, (user) => {
 			if (user) {
-				goto('/');
+				goto('/projects/private-chat');
 			} else {
 				show = true;
 			}

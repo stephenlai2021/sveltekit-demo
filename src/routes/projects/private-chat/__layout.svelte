@@ -33,7 +33,7 @@
 	onMount(async () => {
 		onAuthStateChanged(auth, (_user) => {
 			if (!_user) {
-				goto('/login');
+				goto('/projects/login');
 			} else {
 				user = _user;
 				
