@@ -30,19 +30,15 @@
 
 <div class="layout">
 	<nav>
-		<div class="left">
-			<h1 class="logo">Hi, there 😀</h1>
-		</div>
+		<h1>Hi, there ! 😀</h1>
 
-		<div class="middle">
-			{#if $pageDetails}
-				<div class="title">
-					<h1>
-						<a href={JSON.parse($pageDetails).path}>{JSON.parse($pageDetails).title}</a>
-					</h1>
-				</div>
-			{/if}
-		</div>
+		{#if $pageDetails}
+			<div class="title">
+				<h1>
+					<a href={JSON.parse($pageDetails).path}>{JSON.parse($pageDetails).title}</a>
+				</h1>
+			</div>
+		{/if}
 
 		<div class="right">
 			{#if user && JSON.parse($pageDetails).title === 'Book List'}
@@ -100,24 +96,14 @@
 	.right {
 		display: flex;
 		align-items: center;
+		margin-left: auto;
 	}
-
-	.left {
-		display: flex;
-	}
-
-	.middle {
-		width: 90%;
-	}
-
-	.logo {
-		width: 190px;
-	}
-
+	
 	.title {
 		display: flex;
+		margin-left: 142px;
 		text-align: center;
-		width: 85%;
+		width: 70%;
 	}
 
 	.config {
@@ -139,14 +125,14 @@
 	}
 
 	.profile .img-container {
-		width: 40px;
-		height: 40px;
+		width: 35px;
+		height: 35px;
 		cursor: pointer;
 	}
 
 	.profile .img-container img {
-		width: 40px;
-		height: 40px;
+		width: 35px;
+		height: 35px;
 		object-fit: cover;
 		border-radius: 50%;
 	}
@@ -165,7 +151,7 @@
 
 	nav {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		padding: 20px 30px;
 	}

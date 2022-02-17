@@ -96,28 +96,6 @@ li {
 	list-style: none;
 }
 
-/* form */
-/* form label,
-form input {
-	display: block;
-}
-
-form input {
-	padding: 4px;
-	margin-top: 10px;
-	margin-bottom: 20px;
-}
-
-button {
-	background: #0ec58e;
-	color: white;
-	border: 0;
-	border-radius: 6px;
-	padding: 6px;
-	cursor: pointer;
-} */
-
-/* search */
 .search {
 	position: relative;
 	/* width: 30%; */
