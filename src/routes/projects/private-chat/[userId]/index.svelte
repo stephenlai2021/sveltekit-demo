@@ -177,7 +177,7 @@
 
 	.message.friend_message::before {
 		left: -12px;
-		background: linear-gradient(225deg, #ededed 0%, #ededed 50%, transparent 50%, transparent);
+		background: linear-gradient(225deg, #f5f5f5 0%, #f5f5f5 50%, transparent 50%, transparent);
 	}
 
 	.message.my_message::before {

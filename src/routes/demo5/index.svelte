@@ -56,7 +56,7 @@
 		showError = false
 	}
 
-	let myUserList = []
+	let myUserList = null
 	let myRef = collection(db, 'whatzapp_users')
 	const unsub = onSnapshot(myRef, snapshot => {
 		let tempUserList = []
@@ -147,10 +147,10 @@
 	{/if}
 </section>
 
-<section>
+<!-- <section>
 	<div class="users">
-		{#if users}
-			{#each users as user}
+		{#if myUserList}
+			{#each myUserList as user}
 				<div class="user-list">
 					<div class="img-container">
 						<img src={user.avatar} alt="user avatar" />
@@ -170,7 +170,7 @@
 			<p>...waiting</p>
 		{/if}
 	</div>
-</section>	
+</section>	 -->
 
 <style>
 	button {
